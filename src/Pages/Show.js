@@ -18,7 +18,7 @@ const Show = () => {
     getApi(`shows/${id}?embed[]=seasons&embed[]=cast`)
       .then((response) => {
         if (isMounted) {
-          setShow(response.data);
+          setShow(response);
           setLoading(false);
         }
       })
